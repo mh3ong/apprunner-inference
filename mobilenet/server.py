@@ -12,7 +12,7 @@ from tensorflow.keras.applications import (
 )
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--model', default='mobilenet', type=str)
+parser.add_argument('--model', default='mobilenet,mobilenet_v2,inception_v3', type=str)
 parser.add_argument('--hostname', default='0.0.0.0', type=str)
 parser.add_argument('--port', default=5001, type=int)
 args = parser.parse_args()
@@ -21,12 +21,17 @@ hostname = args.hostname
 port = args.port
 
 models = {
-    'mobilenet': mobilenet
+    'mobilenet': mobilenet,
+    'mobilenet_v2': mobilenet_v2,
+    'inception_v3': inception_v3
 }
 
 models_detail = {
-    'mobilenet': mobilenet.MobileNet(weights='imagenet')
+    'mobilenet': mobilenet.MobileNet(weights='imagenet'),
+    'mobilenet_v2': mobilenet_v2.MobileNetV2(weights='imagenet'),
+    'inception_v3': inception_v3.InceptionV3(weights='imagenet')
 }
+
 
 
 def mobilenet_load_image(image_path):
