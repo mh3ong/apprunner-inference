@@ -7,7 +7,6 @@ RUN mkdir /apprunner-inference
 WORKDIR /apprunner-inference
 
 COPY ./dataset ./dataset
-# COPY ./mobilenet_saved_model ./mobilenet_saved_model
 COPY ./server.py .
 COPY ./requirements.txt .
 
