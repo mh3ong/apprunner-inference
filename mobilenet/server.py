@@ -8,7 +8,9 @@ import os
 import time
 
 from tensorflow.keras.applications import (
-    mobilenet
+    mobilenet,
+    mobilenet_v2,
+    inception_v3
 )
 
 parser = argparse.ArgumentParser()
