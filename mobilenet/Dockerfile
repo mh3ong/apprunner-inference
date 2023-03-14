@@ -12,7 +12,7 @@ COPY ./requirements.txt .
 
 #dataset download
 RUN cd ./dataset && chmod +x ./dataset_download.sh
-RUN ./dataset/dataset_download.sh
+RUN cd ./dataset && ./dataset_download.sh
 
 RUN pip install -r requirements.txt
 
