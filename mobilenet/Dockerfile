@@ -4,7 +4,7 @@ FROM python:3.9-slim
 RUN apt update -y && apt install curl unzip -y
 
 #apt cache clean
-RUN apt cache clean all
+RUN apt-get clean all
 
 RUN mkdir /apprunner-inference
 
