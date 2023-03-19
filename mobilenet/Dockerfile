@@ -11,8 +11,7 @@ RUN mkdir /apprunner-inference
 WORKDIR /apprunner-inference
 
 COPY ./dataset ./dataset
-COPY ./server.py .
-COPY ./requirements.txt .
+COPY ./server.py ./requirements.txt ./
 
 #dataset download
 RUN cd ./dataset && chmod +x ./dataset_download.sh

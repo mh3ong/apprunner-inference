@@ -81,7 +81,7 @@ loaded_models = {}
 for model_name in models_to_load:
   model_names = models_detail.keys()
   if model_name in model_names:
-      model_path = f'{model_name}_saved_model'
+      model_path = f'./{model_name}_saved_model'
       if os.path.isdir(model_path) == False:
           print('model save')
           save_model(model_name, model_path)
