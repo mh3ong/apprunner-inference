@@ -102,7 +102,7 @@ def mobilenetv1():
 
     inference_time = inference_end_time - inference_start_time
     
-    return f'mobilenetv1 inference success\ninference time:{inference_time}\n'
+    return f'mobilenetv1 inference success\ninference time: {inference_time}\n'
 
 @app.route('/mobilenet_v2')
 def mobilenetv2():
@@ -114,7 +114,7 @@ def mobilenetv2():
 
     # print(result)
 
-    return f'mobilenetv2 inference success\ninference time:{inference_time}\n'
+    return f'mobilenetv2 inference success\ninference time: {inference_time}\n'
 
 @app.route('/inception_v3')
 def inceptionv3():
@@ -126,7 +126,7 @@ def inceptionv3():
 
     # print(result)
 
-    return f'inceptionv3 inference success\ninference time:{inference_time}\n'
+    return f'inceptionv3 inference success\ninference time: {inference_time}\n'
 
 @app.route('/healthcheck')
 def healthcheck():
